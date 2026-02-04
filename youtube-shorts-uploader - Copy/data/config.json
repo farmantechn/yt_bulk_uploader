@@ -1,0 +1,9 @@
+{
+  "isSetupComplete": false,
+  "clientId": null,
+  "clientSecret": null,
+  "redirectUri": null,
+  "accessToken": null,
+  "refreshToken": null,
+  "tokenExpiry": null
+}

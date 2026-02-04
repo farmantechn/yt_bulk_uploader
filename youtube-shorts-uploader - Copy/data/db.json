@@ -1,0 +1,24 @@
+{
+  "settings": {
+    "scheduleTime": "10:31"
+  },
+  "videos": [
+    {
+      "id": "1770234862523",
+      "filename": "1770234862502-550881851.mp4",
+      "path": "C:\\Users\\Yasir khan\\Documents\\New folder (3)\\youtube-shorts-uploader\\data\\uploads\\1770234862502-550881851.mp4",
+      "title": "one rules ",
+      "description": "",
+      "tags": [
+        "oen rules"
+      ],
+      "videoType": "short",
+      "scheduledDateTime": "2026-02-05T00:57:00",
+      "timezone": "Asia/Karachi",
+      "status": "failed",
+      "createdAt": "2026-02-04T19:54:22.523Z",
+      "error": "The user has exceeded the number of videos they may upload."
+    }
+  ],
+  "lastUploadDate": "2026-02-04"
+}
