@@ -136,3 +136,16 @@ document.getElementById('scheduleDate').valueAsDate = new Date();
 // Init
 loadVideos();
 setInterval(loadVideos, 5000);
+// Live Clock - Shows real system time
+function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('clockTime').textContent = timeString;
+}
+
+// Update clock every second
+updateClock();
+setInterval(updateClock, 1000);
