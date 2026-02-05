@@ -73,3 +73,32 @@ app.listen(PORT, async () => {
 
     console.log('========================================');
 });
+
+
+
+// Start server
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", async () => {
+    console.log('========================================');
+    console.log('  FARMAN BULK UPLOADER v2.0');
+    console.log('========================================');
+    console.log(`Server running on port ${PORT}`);
+
+    if (configService.isSetupComplete()) {
+        console.log('Status: ✅ Setup complete');
+        console.log('Starting scheduler...');
+
+        try {
+            const schedulerService = require('./services/schedulerService');
+            await schedulerService.initScheduler();
+        } catch (err) {
+            console.error('Scheduler error:', err.message);
+        }
+    } else {
+        console.log('Status: ⚠️ Setup required');
+        console.log('Open /setup in browser to configure');
+    }
+
+    console.log('========================================');
+});
