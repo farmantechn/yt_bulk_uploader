@@ -142,7 +142,50 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+/* Live Clock Styles */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
+.live-clock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(0, 217, 166, 0.15), rgba(0, 255, 242, 0.1));
+    border: 1px solid rgba(0, 217, 166, 0.3);
+    border-radius: 14px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 20px rgba(0, 217, 166, 0.2);
+    animation: clockPulse 2s ease-in-out infinite;
+}
+
+.clock-icon {
+    font-size: 20px;
+    animation: clockSpin 60s linear infinite;
+}
+
+@keyframes clockSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes clockPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(0, 217, 166, 0.2); }
+    50% { box-shadow: 0 4px 30px rgba(0, 217, 166, 0.4); }
+}
+
+.clock-time {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--aqua), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
 .btn-glow {
     background: linear-gradient(135deg, var(--primary) 0%, var(--aqua) 100%);
     color: #0a0a0f;
